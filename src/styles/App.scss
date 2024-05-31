@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import "settings";
+
+.App {
+  max-width: 1440px;
+  padding: 30px 45px;
+  font-family: Montserrat;
+
+  @media (max-width: $small-screen) {
+    padding: 20px;
+  }
+}
