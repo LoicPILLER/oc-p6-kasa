@@ -1,13 +1,15 @@
 import Header from "./Header";
+import Footer from "./Footer"
 
 import '../styles/App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
