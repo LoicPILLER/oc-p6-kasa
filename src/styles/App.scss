@@ -5,4 +5,12 @@
 .App {
   max-width: 1440px;
   font-family: Montserrat;
+
+  main {
+    padding: 30px 45px;
+
+    @media (max-width: $small-screen) {
+      padding: 20px;
+    }
+  }
 }

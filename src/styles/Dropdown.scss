@@ -1,0 +1,48 @@
+@import "settings";
+
+.dropdown {
+  font-size: 18px;
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $primary-color;
+    padding: 10px;
+    border-radius: 5px;
+
+    color: white;
+    font-weight: 700;
+
+    @media (max-width: $small-screen) {
+      font-size: 13px;
+      padding: 5px;
+    }
+
+    button {
+      background-color: $primary-color;
+      height: 32px;
+    }
+  }
+
+  .dropdown-content {
+    background-color: $secondary-color;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px;
+
+    @media (max-width: $small-screen) {
+      font-size: 12px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @media (max-width: $small-screen) {
+        gap: 5px;
+      }
+    }
+  }
+}
