@@ -10,7 +10,7 @@ function Dropdown({ name, list }) {
     return (
         <div className="dropdown">
             <div className="dropdown-toggle">
-                <p>Texte</p>
+                <p>{name}</p>
                 <button onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <ChevronUp size={32} color="white" /> : <ChevronDown size={32} color="white" />}
                 </button>

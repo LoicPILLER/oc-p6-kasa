@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {BrowserRoute, Routes, Route, BrowserRouter} from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async';
 
 import reportWebVitals from './reportWebVitals';
@@ -13,28 +13,24 @@ import Footer from "./components/Footer"
 
 import HomePage from './pages/HomePage';
 import NotFoundPage from "./pages/NotFoundPage";
-
-const rooter = new createBrowserRouter([
-    {
-        path: '/',
-        element: <HomePage />
-    },
-    {
-        path: '*',
-        element: <NotFoundPage />
-    }
-]);
+import AboutPage from "./pages/AboutPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <HelmetProvider>
-            <Header />
-            <main>
-                <RouterProvider router={rooter} />
-            </main>
-            <Footer />
-        </HelmetProvider>
+        <BrowserRouter>
+            <HelmetProvider>
+                <Header />
+                <main>
+                    <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        <Route path='/about' element={<AboutPage />} />
+                        <Route path='*' element={<NotFoundPage />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </HelmetProvider>
+        </BrowserRouter>
     </React.StrictMode>
 );
 
