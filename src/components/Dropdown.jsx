@@ -8,23 +8,21 @@ function Dropdown({ name, list }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="dropdown">
-            <div className="dropdown-toggle">
+        <details className="dropdown">
+            <summary className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
                 <p>{name}</p>
-                <button onClick={() => setIsOpen(!isOpen)}>
+                <button>
                     {isOpen ? <ChevronUp size={32} color="white" /> : <ChevronDown size={32} color="white" />}
                 </button>
-            </div>
-            {isOpen ?
+            </summary>
             <div className="dropdown-content">
                 <ul>
-                    {list.map((element) => (
-                        <li>{element}</li>
+                    {list.map((element, index) => (
+                        <li key={index}>{element}</li>
                     ))}
                 </ul>
             </div>
-            : null}
-        </div>
+        </details>
     );
 }
 

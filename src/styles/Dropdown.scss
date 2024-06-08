@@ -43,6 +43,10 @@
       @media (max-width: $small-screen) {
         gap: 5px;
       }
+
+      li {
+        line-height: 1.5;
+      }
     }
   }
 }

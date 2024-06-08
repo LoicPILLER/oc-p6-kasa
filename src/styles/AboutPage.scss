@@ -1,0 +1,15 @@
+@import "settings";
+
+.about-page {
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 90px ;
+
+    @media (max-width: $small-screen) {
+      padding: 0;
+    }
+  }
+}
