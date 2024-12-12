@@ -1,8 +1,8 @@
-import Dropdown from "../components/Dropdown";
 import {Helmet} from "react-helmet-async";
 
 import HeroBanner from "../components/HeroBanner";
 import heroBannerBg from "../assets/img/home-hero-banner-bg.png";
+import AccommodationList from "../components/AccommodationList";
 
 function HomePage() {
     return (
@@ -15,7 +15,7 @@ function HomePage() {
                 imageUrl={heroBannerBg}
                 overlayOpacity={0.6}
             />
-            <Dropdown name="Test" list={['elem1', 'elem2']} />
+            <AccommodationList />
         </div>
     );
 }

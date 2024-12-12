@@ -3,13 +3,35 @@
 @import "settings";
 
 #root {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  * {
+    max-width: 100vw;
+  }
 
   main {
-    padding: 30px 45px;
+    padding: 30px 75px;
 
     @media (max-width: $small-screen) {
       padding: 20px;
     }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    @media (max-width: $medium-screen) {
+      flex-direction: column;
+    }
+  }
+
+  .justify-between {
+    justify-content: space-between;
   }
 }

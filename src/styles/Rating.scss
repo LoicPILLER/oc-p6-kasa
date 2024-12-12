@@ -1,0 +1,16 @@
+@import "settings";
+
+.rating-container {
+  display: flex;
+  gap: 8px;
+
+  .star-filled {
+    fill: currentColor;
+    color: $primary-color;
+  }
+
+  .star-empty {
+    fill: currentColor;
+    color: $tertiary-color;
+  }
+}

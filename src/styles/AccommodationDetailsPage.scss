@@ -1,0 +1,64 @@
+@import "settings";
+
+
+.loader {
+  margin: auto;
+  margin-top: 200px;
+  width: 180px;
+  height: 180px;
+  border: 16px solid $secondary-color;
+  border-top: 16px solid $primary-color;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.accommodation-details-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  img.accommodation-cover {
+    border-radius: 25px;
+    max-height: 415px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: $primary-color
+  }
+
+  .location {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .lg-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .lg-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (max-width: $medium-screen) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

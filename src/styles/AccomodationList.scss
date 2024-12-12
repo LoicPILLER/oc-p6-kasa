@@ -1,0 +1,22 @@
+@import "settings";
+
+.accommodations-list {
+  background-color: $secondary-color;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 60px;
+  width: 100%;
+  gap: 60px;
+
+  @media (max-width: $large-screen) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $medium-screen) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+    background-color: white;
+  }
+}

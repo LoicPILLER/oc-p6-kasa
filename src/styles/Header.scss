@@ -3,8 +3,9 @@
 header {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   align-items: center;
-  padding: 30px 45px;
+  padding: 30px 70px;
 
   @media (max-width: $small-screen) {
     padding: 20px;
@@ -25,6 +26,7 @@ header {
     }
 
     li {
+      white-space: nowrap;
       a {
         font-size: 24px;
         color: black;

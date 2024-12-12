@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import {Helmet} from "react-helmet-async";
+import '../styles/NotFoundPage.scss';
 
 const NotFoundPage = () => {
     return (
-        <div>
+        <div className="not-found-page">
             <Helmet>
                 <title>Erreur 404 - Kasa</title>
             </Helmet>

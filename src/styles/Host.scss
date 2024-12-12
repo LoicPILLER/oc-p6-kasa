@@ -1,0 +1,22 @@
+@import "settings";
+
+.host {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+  p {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: right;
+    white-space: break-spaces;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+  }
+}

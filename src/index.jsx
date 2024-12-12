@@ -14,6 +14,7 @@ import Footer from "./components/Footer"
 import HomePage from './pages/HomePage';
 import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
+import AccommodationDetailsPage from "./pages/AccommodationDetailsPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,8 @@ root.render(
                     <Routes>
                         <Route path='/' element={<HomePage />} />
                         <Route path='/about' element={<AboutPage />} />
+                        <Route path='/accommodation/:id' element={<AccommodationDetailsPage />} />
+                        <Route path='/404' element={<NotFoundPage />} />
                         <Route path='*' element={<NotFoundPage />} />
                     </Routes>
                 </main>
