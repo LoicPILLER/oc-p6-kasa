@@ -2,6 +2,20 @@
 
 .dropdown {
   font-size: 18px;
+
+  &.open .dropdown-content {
+    max-height: 300px;
+
+    ul {
+      max-height: 260px;
+    }
+  }
+
+  &.open .icon {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+  }
+
   .dropdown-toggle {
     display: flex;
     justify-content: space-between;
@@ -22,6 +36,11 @@
     button {
       background-color: $primary-color;
       height: 32px;
+
+      .icon {
+        display: block;
+        transition: transform 0.3s ease;
+      }
     }
   }
 
@@ -29,16 +48,23 @@
     background-color: $secondary-color;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 20px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
 
     @media (max-width: $small-screen) {
       font-size: 12px;
     }
 
     ul {
+      margin: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.8s ease;
 
       @media (max-width: $small-screen) {
         gap: 5px;
